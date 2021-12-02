@@ -67,9 +67,12 @@ def plot_chart_date(date):
     chart = alt.Chart(time_dict[date]).mark_circle().encode(
             y='high',
             x='volume',
-            color = 'high',
-            tooltip=['Name', 'open', 'high', 'close']
-        ).properties(
+            size = 'open'
+            tooltip=['Name', 'open', 'high', 'close'],
+            color = alt.condition(brush,alt.value('red'),alt.value('blue'),)
+).add_selection(
+    brush
+).properties(
     title=f'The stock price scatter on {str(date)}',
     width=800,
     height=1500
