@@ -79,7 +79,7 @@ def plot_chart_name(name):
     chart = alt.Chart(name_dict[name]).mark_line().encode(
         x='date',
         y='high',
-        tooltip=['open', 'high', 'close'],
+        tooltip=['date','open', 'high', 'close'],
     ).properties(
     title=f'The stock price change for {str(name)}',
     width=800,
