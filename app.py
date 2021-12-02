@@ -67,7 +67,7 @@ def plot_chart_date(date):
     chart = alt.Chart(time_dict[date]).mark_circle().encode(
             y='high',
             x='volume',
-            size = 'open'
+            size = 'open',
             tooltip=['Name', 'open', 'high', 'close'],
             color = alt.condition(brush,alt.value('red'),alt.value('blue'),)
 ).add_selection(
