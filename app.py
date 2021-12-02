@@ -69,10 +69,7 @@ def plot_chart_date(date):
             x='volume',
             size = 'open',
             tooltip=['Name', 'open', 'high', 'close'],
-            color = alt.condition(brush,alt.value('red'),alt.value('blue'),)
-).add_selection(
-    brush
-).properties(
+            color = alt.value('red')).properties(
     title=f'The stock price scatter on {str(date)}',
     width=800,
     height=1500
