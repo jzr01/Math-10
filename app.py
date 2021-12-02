@@ -107,13 +107,21 @@ if __name__ == '__main__':
     #title
     st.title("Zhengran Ji's Final Project")
 
-    #data handle
+  
     st.subheader('Introduction:')
     st.write('In this project, I will use the data of S&P 500 price information from 2013 to 2018. The links for the raw data and the github page are as follow.')
+    
+    #links 
     a = 'raw data'
     b = 'https://www.kaggle.com/camnugent/sandp500'
     link = f'[{a}]({b})'
     st.markdown(link, unsafe_allow_html=True)
+    a = 'Source Code'
+    b = 'https://github.com/jzr01/Math-10-final-project'
+    link = f'[{a}]({b})'
+    st.markdown(link, unsafe_allow_html=True)
+    
+    #load the data
     df = pd.read_csv('all_stocks_5yr.csv')
 
     #bad rows
