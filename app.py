@@ -108,7 +108,7 @@ if __name__ == '__main__':
     st.title("Zhengran Ji's Final Project")
 
     #data handle
-    st.markdown('Introduction:/n'+
+    st.markdown('Introduction:\n'+
                 'In this project, I will use the data of S&P 500 price information from 2013 to 2018. The links for the raw data and the github page are as follow.')
     a = 'raw data'
     b = 'https://www.kaggle.com/camnugent/sandp500'
